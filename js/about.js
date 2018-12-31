@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
 
     var typed = new Typed("#typed", {
-        strings: ["I am Curious", "I am well Organised", "I love Sports", "I am Creative", "I know some Jokes", "I love Coffee"],
+        strings: ["I am Well Organised", "I love Hardwork", "I am fully Active", "I love Sports", "I work calmly", "I am Responsible", "I am Creative", "I am a Team Man", "I love to Lead"],
         typeSpeed: 70,
         backSpeed: 70,
         smartBackspace: true,

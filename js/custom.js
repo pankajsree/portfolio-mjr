@@ -15,6 +15,17 @@ var cursorTop;
 var prevScroll;
 var curScroll;
 
+var wWidth;
+var homeHeight;
+var branchHeight;
+var homeInnerHeight;
+var branchInnerHeight;
+var theta;
+var thetaBranch;
+
+var introContainerLeft;
+var branchContainerLeft;
+
 function initialise() {
     rem = 18;
     cursorWidth = 10;
@@ -24,11 +35,43 @@ function initialise() {
 
     prevScroll = 0;
     curScroll = 0;
+
+    wWidth = $(window).width();
+    homeHeight = $("#home").height();
+    branchHeight = $("#branch").height();
+    homeInnerHeight = $("#home").innerHeight();
+    branchInnerHeight = $("#branch").innerHeight();
+
+    theta = Math.atan(homeHeight / wWidth);
+    theta = Math.floor(theta * (180 / Math.PI) * 100) / 100;
+    $("#blade-home").css("transform",  "skewY(-" + theta + "deg)");
+
+    thetaBranch = Math.atan(branchHeight / wWidth);
+    thetaBranch = Math.floor(thetaBranch * (180 / Math.PI) * 100) / 100;
+    $("#blade-branch").css("transform",  "skewY(-" + thetaBranch + "deg)");
+
+    introContainerLeft = $("#container-intro").offset().left + 15;
+    branchContainerLeft = $("#container-branch").offset().left + 15;
+    var gap = 7.25 * rem;
+
+    $("#home-razor-content").css({
+        "left": introContainerLeft,
+        "top": homeInnerHeight - gap
+    });
+
+    var gap2 = 8.5 * rem;
+
+    $("#branch-razor-content").css({
+        "left": branchContainerLeft,
+        "top": branchInnerHeight - gap2
+    });
 }
 
 $(document).ready(function() {
 
     initialise();
+
+
 
     /*****   CURSOR movement   *****/
     $(document).mousemove(function(e) {
@@ -81,11 +124,43 @@ $(document).ready(function() {
         prevScroll = curScroll;
     });
 
-    var typed= new Typed("#typed-1", {
-        strings: ["I am a Mech", "Internship Co-ordinator"],
+    setTimeout(function() {
+        $("#cover-1").width(0);
+    }, 200);
+
+    setTimeout(function() {
+        $("#cover-2").width(0);
+    }, 1200);
+
+    setTimeout(function() {
+        $("#cover-3").width(0);
+    }, 2200);
+
+    setTimeout(function() {
+        $("#underline-3").width("100%");
+    }, 3200);
+
+    setTimeout(function() {
+        $("#home-razor-content, #img-home-top").css({
+            "opacity": "1"
+        });
+    }, 4200);
+
+    var typed4 = new Typed("#typed-4", {
+        strings: ["Bio Engineering", "Chemical Engineering", "Civil Engineering", "Computer Science and Engineering", "Electrical Engineering", "Electronics and Communication Engineering", "Electronics and Instrumentation Engineering", "Production Engineering"],
         typeSpeed: 70,
         backSpeed: 70,
-        smartBackspace: true,
+        smartBackspace: false,
+        backDelay: 200,
+        loop: true,
+        showCursor: false
+    });
+
+    var typed5 = new Typed("#typed-5", {
+        strings: ["Tripura Sundari", "Neermahal", "Jampui Hills", "Sepahijala", "Unakoti", "Ujjayanta Palace", "Dumboor"],
+        typeSpeed: 70,
+        backSpeed: 70,
+        smartBackspace: false,
         backDelay: 200,
         loop: true,
         showCursor: false

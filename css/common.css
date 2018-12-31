@@ -1,0 +1,139 @@
+:root {
+
+    /*** Font Variables ***/
+
+    --font1: 'Open Sans', sans-serif;
+    --font2: 'Cormorant Upright', serif;
+    --font3: 'Vollkorn', serif;
+    --font4: 'Dancing Script', cursive;
+    --font5: 'Cute Font', cursive;
+    --font6: 'Kaushan Script', cursive;
+    --font7: 'Nanum Myeongjo', serif;
+    --font8: 'Lobster Two', cursive;
+    --font9: 'Lobster', cursive;
+    --font10: 'Poiret One', cursive;
+    --font11: 'Satisfy', cursive;
+
+    --font12: 'Philosopher', sans-serif;
+    --font13: 'Special Elite', cursive;
+    --font14: 'Merienda', cursive;
+    --font15: 'Cinzel Decorative', cursive;
+    --font16: 'Faster One', cursive;
+    --font17: 'Lemonada', cursive;
+
+    /*** My Code ***/
+
+    font-size: 18px;
+
+}
+
+@media only screen
+    and (min-width:992px)
+    and (max-width: 1199px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media only screen
+    and (min-width:768px)
+    and (max-width: 991px) {
+    :root {
+        font-size: 14px;
+    }
+}
+
+@media only screen
+    and (min-width:576px)
+    and (max-width: 767px) {
+    :root {
+        font-size: 13px;
+    }
+}
+
+@media only screen
+    and (max-width: 575px) {
+    :root {
+        font-size: 12px;
+    }
+}
+
+html, body {
+    cursor: none;
+}
+
+body {
+    font-family: var(--font2);
+    background-color: #141516;
+    color: white;
+}
+
+#cursor {
+    pointer-events: none;
+
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    background-color: #f0002f;
+    border-radius: 50%;
+    left: -5px;
+    top: -5px;
+    z-index: 9999;
+
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+
+a {
+    cursor: none;
+
+    color: white;
+}
+
+a:hover {
+    color: #fffff0;
+}
+
+nav {
+    background-color: transparent;
+    transition: all 1.5s ease;
+}
+
+nav a {
+    color: var(--teal);
+    color: rgba(255, 255, 255, 0.5);
+}
+
+nav .active {
+    color: white;
+}
+
+.nav-link {
+    margin: 0 1rem;
+}
+
+footer {
+    transition: all 1.5s ease;
+}
+
+
+
+
+.fa-quote-left {
+    vertical-align: top;
+    margin-right: 0.5rem;
+}
+
+.fa-quote-right {
+    vertical-align: bottom;
+    margin-left: 0.5rem;
+}
+
+.bb-center-1 {
+    border-bottom: 1px solid #fff;
+    border-image: linear-gradient(to right, transparent, #fff, transparent);
+    border-image-slice: 1;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
