@@ -1,0 +1,47 @@
+body {
+    padding-top: 6rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.captions {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 2rem 0;
+}
+
+.my-name {
+    font-family: var(--font6);
+    font-size: 5rem;
+}
+
+.about-content {
+    line-height: 2;
+    letter-spacing: 1px;
+    color: var(--teal);
+    text-align: justify;
+}
+
+#typed {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-family: var(--font5);
+    color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    margin-top: 2.5rem;
+    padding: 2rem 0;
+}
+
+footer a {
+    color: var(--teal);
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+}

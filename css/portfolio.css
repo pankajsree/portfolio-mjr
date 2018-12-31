@@ -1,0 +1,325 @@
+body, html {
+    overflow: hidden;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#close {
+    position: fixed;
+    color: var(--teal);
+    color: rgba(255, 255, 255, 0.5);
+    display: none;
+    padding: .5rem 1rem;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1031;
+}
+
+#close:hover {
+    color: #fff;
+}
+
+#option-hovered {
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+
+    z-index: 900;
+}
+
+.options-container {
+    position: fixed;
+    right: 1.5rem;
+    top: 50vh;
+    transform: translateY(-50%);
+    z-index: 900;
+    transition: opacity 1s ease;
+    text-align: right;
+}
+
+.options-container a {
+    color: var(--teal);
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.options-container .active {
+    color: white;
+}
+
+.option {
+    display: block;
+    line-height: 3rem;
+}
+
+.option a, {
+    display: inline-block;
+}
+
+.seperator {
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--teal);
+    float: right;
+}
+
+.case {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.case-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #141516;
+}
+
+.case-right {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: #141516;
+    transition: all 0.7s ease;
+}
+
+.case-bottom {
+    position: absolute;
+    /* top: 80vh; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background-color: #141516;
+}
+
+@keyframes transition-top {
+    0% { height: 20vh; }
+    50% { height: 30vh; }
+    75% { height: 30vh; }
+    100% { height: 0; }
+}
+
+.class-transition-top {
+    animation-name: transition-top;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes reverse-transition-top {
+    0% { height: 0; }
+    50% { height: 30vh; }
+    100% { height: 20vh; }
+}
+
+.class-reverse-transition-top {
+    animation-name: reverse-transition-top;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes transition-right {
+    0% { left: 55%; }
+    100% { left: 100%; }
+}
+
+.class-transition-right {
+    animation-name: transition-right;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes reverse-transition-right {
+    0% { left: 100%; }
+    50% { left: 40%; }
+    100% { left: 50%; }
+}
+
+.class-reverse-transition-right {
+    animation-name: reverse-transition-right;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes transition-bottom {
+    0% { height: 20vh; }
+    50% { height: 30vh; }
+    100% { height: 0; }
+}
+
+.class-transition-bottom {
+    animation-name: transition-bottom;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes reverse-transition-bottom {
+    0% { height: 0; }
+    50% { height: 30vh; }
+    100% { height: 20vh; }
+}
+
+.class-reverse-transition-bottom {
+    animation-name: reverse-transition-bottom;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.case h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #141516;
+    padding: 0;
+    font-size: 8rem;
+    font-family: var(--font5);
+    text-transform: uppercase;
+    padding: 1.5rem;
+
+    transition: opacity 1s ease;
+
+    opacity: 0;
+}
+
+.line {
+    position: absolute;
+    left: 58%;
+    top: 75vh;
+    width: 2rem;
+    height: 2px;
+    border: 0;
+    background-color: var(--teal);
+    transition: opacity 1.5s ease;
+
+    opacity: 0;
+}
+
+.discover {
+    overflow: hidden;
+    position: absolute;
+    left: calc(58% + 3rem);
+    top: 75vh;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 50%;
+    transition: opacity 1.5s ease;
+
+    opacity: 0;
+}
+
+.discoverA {
+    transition: all 0.5s ease;
+}
+
+.discover a {
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 1.5rem;
+    text-align: center;
+}
+
+.discover a:hover {
+    text-decoration: none;
+}
+
+.discover a:hover .discover-contents {
+    transition: all 0.8s ease;
+    transform: translateY(-1.5rem);
+}
+
+#sec-1 {
+    background-image: url('../images/car.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sec-2 {
+    background-image: url('../images/internship6.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sec-3 {
+    background-image: url('../images/project2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#sec-4 {
+    background-image: url('../images/car5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+footer {
+    position: fixed;
+    bottom: 2.5rem;
+}
+
+footer a {
+    color: var(--teal);
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
